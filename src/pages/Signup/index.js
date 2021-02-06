@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import { InputAdornment, IconButton, FormControl, OutlinedInput } from "@material-ui/core";
+import { InputAdornment, IconButton, FormControl } from "@material-ui/core";
 import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
+import AccountCircleOutlinedIcon from '@material-ui/icons/AccountCircleOutlined';
+import EmailOutlinedIcon from '@material-ui/icons/EmailOutlined';
+import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 
 import {
   PageWrapper,
@@ -15,7 +18,10 @@ import {
   FormSignin,
   SignupText,
   Button,
-  ButtonLink
+  ButtonLink,
+  InputOutline,
+  ButtonSignup,
+  ButtonLinkSignup,
 } from "./styled";
 
 function Signup() {
@@ -56,23 +62,29 @@ function Signup() {
 
         <FormSignup>
           <FormControl fullWidth variant="outlined">
-            <OutlinedInput
+            <InputOutline
               placeholder="E-mail"
               value={emailSignup}
               required
               type="email"
               onChange={handleUpdateEmailSignup}
+              startAdornment={
+                <EmailOutlinedIcon/>
+              }
             />
           </FormControl>
 
           <FormControl fullWidth variant="outlined">
-            <OutlinedInput
+            <InputOutline
               placeholder="Senha"
               value={passwordSignup}
               required
               type={showPassword ? "text" : "password"}
               onChange={handleUpdatePasswordSignup}
-              endAdornment ={
+              startAdornment={
+                <LockOutlinedIcon/>
+              }
+              endAdornment={
                 <InputAdornment position="end">
                     <IconButton
                         aria-label="toggle password visibility"
@@ -105,32 +117,41 @@ function Signup() {
           
           <FormSignin>
           <FormControl fullWidth variant="outlined">
-            <OutlinedInput
-              placeholder="Name"
+            <InputOutline
+              placeholder="Nome"
               value={name}
               required
               type="text"
               onChange={handleUpdateName}
+              startAdornment={
+                <AccountCircleOutlinedIcon/>
+              }
             />
           </FormControl>
      
           <FormControl fullWidth variant="outlined">
-            <OutlinedInput
+            <InputOutline
               placeholder="E-mail"
               value={emailSignin}
               required
               type="email"
               onChange={handleUpdateEmailSignin}
+              startAdornment={
+                <EmailOutlinedIcon/>
+              }
             />
           </FormControl>
    
           <FormControl fullWidth variant="outlined">
-            <OutlinedInput
+            <InputOutline
               placeholder="Senha"
               value={passwordSignin}
               required
               type={showPassword ? "text" : "password"}
               onChange={handleUpdatePasswordSignin}
+              startAdornment={
+                <LockOutlinedIcon/>
+              }
               endAdornment ={
                 <InputAdornment position="end">
                     <IconButton
@@ -147,11 +168,11 @@ function Signup() {
         </FormSignin>
 
         <div>
-          <Button>
-            <ButtonLink to="/register">
+          <ButtonSignup>
+            <ButtonLinkSignup to="/register">
               CRIAR CONTA
-            </ButtonLink>
-          </Button>
+            </ButtonLinkSignup>
+          </ButtonSignup>
         </div>
       </SignupArea>
     </PageWrapper>

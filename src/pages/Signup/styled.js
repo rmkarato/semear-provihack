@@ -1,16 +1,21 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
+import { OutlinedInput } from "@material-ui/core";
+
 export const PageWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    color: #333333;
 `;
 
 export const SignInArea = styled.div`
-    background-color: #c4c4c4;
+    background-color: #FAC358;
     width: 50%;
     height: 100vh;
+
 
     display: flex;
     flex-direction: column;
@@ -83,10 +88,47 @@ export const Button = styled.div`
 
 export const ButtonLink = styled(Link)`
     text-decoration: none;
-    color: #F8F8F8;
+    color: #FAC358;
     font-size: 28px;
 
     &:focus, &:hover, &:visited, &:link, &:active {
         text-decoration: none;
+    }
+`;
+
+export const ButtonSignup = styled.div`
+    width: 300px;
+    height: 86px;
+    border-radius: 50px;
+
+    background: #FAC358;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
+
+export const ButtonLinkSignup = styled(Link)`
+    text-decoration: none;
+    color: #333333;
+    font-size: 28px;
+
+    &:focus, &:hover, &:visited, &:link, &:active {
+        text-decoration: none;
+    }
+`;
+
+export const InputOutline = styled(OutlinedInput)`
+    && {
+        font-family: Quicksand;
+        font-size: 22px;
+        color: #333333;
+        height: 72px;
+        border: 2px solid #333333;
+        border-radius: 20px;
+    }
+
+    &:focus {
+        outline: none;
     }
 `;
