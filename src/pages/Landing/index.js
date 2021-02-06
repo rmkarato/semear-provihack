@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { useHistory } from "react-router";
 
 import landingImg from "../../assets/images/landing.svg" ;
 
@@ -13,14 +12,6 @@ import {
 } from "./styled";
 
 function Landing() {
-  const history = useHistory();
-
-  useEffect(() => {
-    setTimeout(() => {
-      history.push("/signup");
-    }, 3000);
-  }, [history]);
-
   return (
       <PageWrapper>
         <LandingImg src={landingImg} alt="Semear"/>
@@ -33,6 +24,13 @@ function Landing() {
             <p>Aprenda</p>
             <p>Ensine</p>
           </SubtitleContainer>
+          <Link to="/signup">
+            CRIAR CONTA
+          </Link>
+          Já tem uma conta? 
+          <Link to="/signup">
+            Fazer login.
+          </Link>
         </TextContainer>
       </PageWrapper>
   );

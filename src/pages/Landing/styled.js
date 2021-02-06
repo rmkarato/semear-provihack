@@ -29,7 +29,7 @@ export const TextContainer = styled.div`
 `;
 
 export const TitleText = styled.h2`
-  font: 500 288px Quicksand;
+  font: 700 288px Quicksand;
 `;
 
 export const SubtitleContainer = styled.div`
