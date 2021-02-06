@@ -7,9 +7,6 @@ export const PageWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
-  color: var(--color-text-in-primary);
-  background: var(--color-primary);
 `;
 
 export const LandingImg = styled.img`
