@@ -10,7 +10,7 @@
   --color-secundary: #04D361;
   --color-secundary-dark: #04BF58;
   --color-title-in-primary: #FFFFFF;
-  --color-text-in-primary: #221E1F;
+  --color-text-in-primary: #000000;
   --color-text-title: #32264D;
   --color-text-complement: #9C98A6;
   --color-text-base: #6A6180;
@@ -27,35 +27,6 @@
   box-sizing: border-box;
 };
 
-html, body, #root {
-  height: 100vh;
-};
-
 body {
   background: var(--color-background)
-};
-
-#root {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-};
-
-body,
-input,
-button,
-textarea {
-    font: 500 1.6rem Quicksand;
-    color: var(--color-text-base)
-};
-
-.container {
-  width: 90vw;
-  max-width: 700px;
-};
-
-@media (min-width: 700px) {
-  :root {
-      font-size: 100%;
-  };
 };
