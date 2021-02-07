@@ -49,6 +49,10 @@ export const RegisterText = styled.div`
     margin-bottom: 52px;
 `;
 
+export const Text = styled.p`
+    margin-left: 67px;
+`;
+
 export const InputOutline = styled(OutlinedInput)`
     && {
         font-family: Quicksand;
@@ -115,11 +119,20 @@ export const ButtonLink = styled(Link)`
     }
 `;
 
+export const ImgContainer = styled.div`
+    object-fit: cover;
+
+    width: 190px;
+    height: 190px;
+`;
+
 export const PhotoProfile = styled.div`
     width: 190px;
     height: 190px;
+    object-fit: cover;
 
     border: 1px solid #333333;
+    display: flex;
 `;
 
 export const FormChoose = styled.div`

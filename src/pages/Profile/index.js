@@ -15,6 +15,7 @@ import {
   PageWrapper,
   FindTitle,
   Sidebar,
+  MainContainer,
   PhotoSidebar,
   MenuSidebar,
   TitleText,
@@ -26,7 +27,8 @@ import {
   RadioInput,
   LabelRadio,
   AskHelpWrapper,
-  ImgRating
+  ImgRating,
+  Text
 } from "./styled";
 
 import CardProfileOfferHelp from "../../components/CardProfileOfferHelp";
@@ -35,7 +37,7 @@ import CardProfileNeedHelp from "../../components/CardProfileNeedHelp";
 function Profile() {
   const [askHelp, setAskHelp] = useState("true");
   const [offerHelp, setOfferHelp] = useState("true");
-  const [level, setLevel] = useState("true");
+  const [level, setLevel] = useState(true);
 
   const handleUpdateAskHelp = (event) => {
     setAskHelp(event.target.value);
@@ -51,7 +53,7 @@ function Profile() {
 
   return (
     <PageWrapper>
-      <FindTitle>Deu Match!! <img src={smileImg} alt="Smile Face"/></FindTitle>
+      <FindTitle><Text>Deu Match!! <img src={smileImg} alt="Smile Face"/></Text></FindTitle>
       <Sidebar>
         <PhotoSidebar/>
         <MenuSidebar>
@@ -59,6 +61,7 @@ function Profile() {
           <StyledLink to="/edit">
             <p><SettingsOutlinedIcon/> Edite Seu Perfil</p>
           </StyledLink>
+
           <StyledLink to="/chat">
             <p><PeopleAltOutlinedIcon/> Minhas Semeadoras</p>
           </StyledLink>
@@ -218,12 +221,13 @@ function Profile() {
           </ImgRating>
       </Sidebar>
 
-      <ProfileText>Semeadoras que podem te ajudar:</ProfileText>
-      <CardProfileOfferHelp/>
+      <MainContainer>
+        <ProfileText>Semeadoras que podem te ajudar:</ProfileText>
+        <CardProfileOfferHelp/>
 
-      <ProfileText>Semeadoras que precisam da sua ajuda:</ProfileText>
-      <CardProfileNeedHelp/>
-
+        <ProfileText>Semeadoras que precisam da sua ajuda:</ProfileText>
+        <CardProfileNeedHelp/>
+      </MainContainer>
     </PageWrapper>
   );
 };
