@@ -1,14 +1,17 @@
 import React, { useState } from "react";
+import { FiPlus } from "react-icons/fi";
 
 import {
   PageWrapper,
   RegisterTitle,
   FormRegister,
   RegisterText,
+  Text,
   InputOutline,
   InputOutlineBig,
   Button,
   ButtonLink,
+  ImgContainer,
   PhotoProfile,
   TypeForm,
   FormChoose
@@ -28,6 +31,8 @@ function Register() {
   const [about, setAbout] = useState("");
   const [linkedin, setLinkedin] = useState("");
   const [portifolio, setPortifolio] = useState("");
+  const [images, setImages] = useState([]);
+  const [previewImages, setPreviewImages] = useState([]);
 
   const handleUpdateName = (event) => {
     setName(event.target.value);
@@ -53,20 +58,52 @@ function Register() {
     setPortifolio(event.target.value);
   };
 
+  const handleSelectImages = (event) => {
+    if (!event.target.files) {
+      return;
+    };
+
+    const selectedImages = Array.from(event.target.files)
+    setImages(selectedImages);
+
+    const selectedImagesPreview =selectedImages.map(image => {
+      return URL.createObjectURL(image);
+    });
+
+    setPreviewImages(selectedImagesPreview);
+  };
+
   return (
     <PageWrapper>
-      <RegisterTitle>Meu Cadastro</RegisterTitle>
+      <RegisterTitle><Text>Meu Cadastro</Text></RegisterTitle>
 
         <RegisterText>Informações Pessoais:</RegisterText>
         
         <FormRegister>
           <div>
             <PhotoProfile>
+              <ImgContainer>
+                  {previewImages.map(image => {
+                    return (
+                      <img key={image} src={image} alt={name} />
+                    )
+                  })}
 
+                <label htmlFor="image[]" className="new-image">
+                  <FiPlus size={24} color="#15b6d6" />
+                </label>
+              </ImgContainer>
+
+              <input 
+                id="image[]"
+                multiple 
+                type="file"
+                onChange={handleSelectImages}
+              />
             </PhotoProfile>
             <p>Adicionar Foto</p>
           </div>
-
+          
           <TypeForm>
             <FormControl fullWidth variant="outlined">
               <InputOutline
@@ -169,7 +206,7 @@ function Register() {
 
       <div>
         <Button>
-          <ButtonLink to="/profile">
+          <ButtonLink to="/myprofile">
             SALVAR INFORMAÇÕES
           </ButtonLink>
         </Button>

@@ -173,5 +173,6 @@ export const InputOutline = styled(OutlinedInput)`
         height: 72px;
         border: 2px solid #333333;
         border-radius: 20px;
+        padding-left: 20px;
     }
 `;

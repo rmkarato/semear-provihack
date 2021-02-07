@@ -7,9 +7,11 @@ import {
   LandingImg,
   TextContainer,
   TitleText,
+  AllContainer,
   SubtitleContainer,
   StyledLink,
   ButtonSignup,
+  Container,
   ButtonLinkSignup,
   LoginWrapper
 } from "./styled";
@@ -22,13 +24,13 @@ function Landing() {
         <TextContainer>
           <TitleText>SEMEAR</TitleText>
 
-          <SubtitleContainer>
-            <p>Conecte-se</p>
-            <p>Aprenda</p>
-            <p>Ensine</p>
-          </SubtitleContainer>
+          <AllContainer>
+            <SubtitleContainer>Conecte-se</SubtitleContainer>
+            <SubtitleContainer>Aprenda</SubtitleContainer>
+            <SubtitleContainer>Ensine</SubtitleContainer>
+          </AllContainer>
           
-          <div>
+          <Container>
             <ButtonSignup>
               <ButtonLinkSignup to="/signup">
                 CRIAR CONTA
@@ -41,7 +43,7 @@ function Landing() {
                 Fazer login.
               </StyledLink>
             </LoginWrapper>
-          </div>
+          </Container>
         </TextContainer>
       </PageWrapper>
   );

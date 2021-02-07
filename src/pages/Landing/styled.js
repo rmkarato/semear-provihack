@@ -2,9 +2,6 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const PageWrapper = styled.div`
-  width: 100vw;
-  height: 100vh;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,8 +17,7 @@ export const LandingImg = styled.img`
 
 export const TextContainer = styled.div`
   z-index: 1;
-  height: 100%;
-
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -29,14 +25,24 @@ export const TextContainer = styled.div`
 `;
 
 export const TitleText = styled.p`
-  font-size: 288px;
+  font-size: 250px;
   font-weight: 700;
 
   margin: 0;
 `;
 
-export const SubtitleContainer = styled.div`
+export const AllContainer = styled.div`
+  height: 208px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+`;
+
+export const SubtitleContainer = styled.p`
   font: 500 48px Quicksand;
+
+  margin: 0;
 `;
 
 export const StyledLink = styled(Link)`
@@ -84,9 +90,17 @@ export const ButtonLinkSignup = styled(Link)`
     }
 `;
 
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
 export const LoginWrapper = styled.div`
-    width: 300px;
+    width: 240px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
     margin-top: 16px;
 `;

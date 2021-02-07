@@ -19,7 +19,6 @@ export const FindTitle = styled.div`
     display: flex;
     justify-content: flex-start;
     align-items: center;
-
 `;
 
 export const Sidebar = styled.div`
@@ -33,6 +32,11 @@ export const Sidebar = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+`;
+
+export const MainContainer = styled.div`
+    width: 75%;
+    margin-left: 25%;
 `;
 
 export const PhotoSidebar = styled.div`
@@ -62,6 +66,25 @@ export const TitleText = styled.p`
 
 export const StyledLink = styled(Link)`
     text-decoration: none;
+
+    &:focus, &:hover, &:visited, &:link, &:active {
+        text-decoration: none;
+        color: #FFFFFF;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+`;
+
+export const StyledButton = styled.button`
+    font: Quicksand;
+    text-decoration: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    background: none;
+    outline: none;
+    border: none;
 
     &:focus, &:hover, &:visited, &:link, &:active {
         text-decoration: none;
@@ -114,7 +137,7 @@ export const ProfileText = styled.div`
 
     margin-top: 52px;
     margin-bottom: 52px;
-    margin-left: 25%;
+    margin-left:35px; 
 `;
 
 export const RadioWrapper = styled.div`
@@ -139,4 +162,8 @@ export const LabelRadio = styled.label`
 
 export const AskHelpWrapper = styled.div`
     padding-bottom: 21px;
+`;
+
+export const Text = styled.p`
+    margin-left: 67px;
 `;

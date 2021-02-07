@@ -64,47 +64,50 @@ function Signup() {
           <TextP>Que bom te ver por aqui novamente!</TextP>
         </SigninTitle>
 
-        <FormSignup>
-          <FormControl fullWidth variant="outlined">
-            <InputOutline
-              placeholder="E-mail"
-              value={emailSignup}
-              required
-              type="email"
-              onChange={handleUpdateEmailSignup}
-              startAdornment={
-                <EmailOutlinedIcon/>
-              }
-            />
-          </FormControl>
+        <div>
+          <FormSignup>
+            <FormControl fullWidth variant="outlined">
+              <InputOutline
+                placeholder="E-mail"
+                value={emailSignup}
+                required
+                type="email"
+                onChange={handleUpdateEmailSignup}
+                startAdornment={
+                  <EmailOutlinedIcon/>
+                }
+              />
+            </FormControl>
 
-          <FormControl fullWidth variant="outlined">
-            <InputOutline
-              placeholder="Senha"
-              value={passwordSignup}
-              required
-              type={showPassword ? "text" : "password"}
-              onChange={handleUpdatePasswordSignup}
-              startAdornment={
-                <LockOutlinedIcon/>
-              }
-              endAdornment={
-                <InputAdornment position="end">
-                    <IconButton
-                        aria-label="toggle password visibility"
-                        onClick={handleClickShowPassword}
-                        onMouseDown={handleMouseDownPassword}
-                    >
-                        {showPassword ? <Visibility /> : <VisibilityOff />}
-                    </IconButton>
-                </InputAdornment>
-              }
-            />
-          </FormControl>
-            <StyledLink to="/resetpassword">
-              <TextPass>Esqueci minha senha</TextPass>
-            </StyledLink>
-        </FormSignup>
+            <FormControl fullWidth variant="outlined">
+              <InputOutline
+                placeholder="Senha"
+                value={passwordSignup}
+                required
+                type={showPassword ? "text" : "password"}
+                onChange={handleUpdatePasswordSignup}
+                startAdornment={
+                  <LockOutlinedIcon/>
+                }
+                endAdornment={
+                  <InputAdornment position="end">
+                      <IconButton
+                          aria-label="toggle password visibility"
+                          onClick={handleClickShowPassword}
+                          onMouseDown={handleMouseDownPassword}
+                      >
+                          {showPassword ? <Visibility /> : <VisibilityOff />}
+                      </IconButton>
+                  </InputAdornment>
+                }
+              />
+            </FormControl>    
+          </FormSignup>
+
+          <StyledLink to="/resetpassword">
+            <TextPass>Esqueci minha senha</TextPass>
+          </StyledLink>
+        </div>
 
         <Button>
           <ButtonLink to="/myprofile">
