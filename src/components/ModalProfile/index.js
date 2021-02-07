@@ -2,8 +2,26 @@ import React, { useState } from "react";
 import Modal from '@material-ui/core/Modal';
 import { makeStyles } from '@material-ui/core/styles';
 
+import gotaBlueImg from "../../assets/images/gotaBlue.svg";
+import brotoImg from "../../assets/images/brotoG.svg";
+import profile1 from "../../assets/images/profile1.svg";
+
 import {
-  ButtonModal
+  ButtonModal,
+  CardContainer,
+  CardWrapper,
+  ImageMini,
+  TextName,
+  TextAge,
+  Category,
+  TextCategory1,
+  HelpContainer,
+  HelpWrapper,
+  TextNumber,
+  TextHelp,
+  ImgRating,
+  GroupWrapper,
+  Container
 } from "./styled";
 
 function rand() {
@@ -48,10 +66,38 @@ function ModalProfile() {
 
   const body = (
     <div style={modalStyle} className={classes.paper}>
-      <h2 id="simple-modal-title">Text in a modal</h2>
-      <p id="simple-modal-description">
-        Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-      </p>
+      <CardContainer>
+        <CardWrapper/>
+          <ImageMini src={profile1} alt="Photo"/>
+          <Container>
+            <TextName>Lu Correia</TextName>
+            <GroupWrapper>
+              <TextAge>28 anos</TextAge> 
+              <ImgRating>
+                  <img src={gotaBlueImg} alt="Gota" />
+                  <img src={gotaBlueImg} alt="Gota" />
+                  <img src={gotaBlueImg} alt="Gota" />
+                  <img src={gotaBlueImg} alt="Gota" />
+                  <img src={gotaBlueImg} alt="Gota" />
+              </ImgRating>
+            </GroupWrapper>
+
+            <Category>
+              <img src={brotoImg} alt="Broto" />
+              <TextCategory1>Produto</TextCategory1>
+            </Category>
+
+            <HelpContainer>
+              <HelpWrapper>
+                <TextNumber>10</TextNumber><TextHelp>Ajudas Concedidas</TextHelp>
+              </HelpWrapper>
+
+              <HelpWrapper>
+                <TextNumber>04</TextNumber><TextHelp>Ajudas Recebidas</TextHelp>
+              </HelpWrapper>
+            </HelpContainer>
+          </Container>
+      </CardContainer>
     </div>
   );
 
