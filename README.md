@@ -30,8 +30,8 @@
 
 ## Equipe 7 - Flaming Flamingos
 
-Jennifer Dennis
-Kelly Diniz
-Renata Bresolin
-Renata Karato
-Thaus Teixeira
+<p align="justify"> Jennifer Dennis </p>
+<p align="justify"> Kelly Diniz </p>
+<p align="justify"> Renata Bresolin </p>
+<p align="justify"> Renata Karato </p>
+<p align="justify"> Thais Teixeira </p>
