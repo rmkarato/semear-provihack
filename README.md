@@ -8,7 +8,7 @@
 
 ## Stack
 
-<p align="justify"> Este é um projeto de front-end feito utilizando Javascript(ReactJS) e CSS(styled-components).</p>
+<p align="justify"> Este é um projeto de front-end feito utilizando Javascript (ReactJS) e CSS (styled-components).</p>
 
 ## Sobre o Projeto
 
