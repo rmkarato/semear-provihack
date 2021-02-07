@@ -14,18 +14,16 @@ import {
   FormChoose
 } from "./styled";
 
-import { InputAdornment, IconButton, FormControl } from "@material-ui/core";
-import Visibility from "@material-ui/icons/Visibility";
-import VisibilityOff from "@material-ui/icons/VisibilityOff";
+import { FormControl } from "@material-ui/core";
 import AccountCircleOutlinedIcon from '@material-ui/icons/AccountCircleOutlined';
 import CakeOutlinedIcon from '@material-ui/icons/CakeOutlined';
 import EmailOutlinedIcon from '@material-ui/icons/EmailOutlined';
 import SentimentSatisfiedOutlinedIcon from '@material-ui/icons/SentimentSatisfiedOutlined';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import LinkOutlinedIcon from '@material-ui/icons/LinkOutlined';
 
 function Register() {
   const [name, setName] = useState("");
+  const [birthday, setBirthday] = useState("");
   const [email, setEmail] = useState("");
   const [about, setAbout] = useState("");
   const [linkedin, setLinkedin] = useState("");
@@ -33,6 +31,10 @@ function Register() {
 
   const handleUpdateName = (event) => {
     setName(event.target.value);
+  };
+
+  const handleUpdateBirthday = (event) => {
+    setBirthday(event.target.value);
   };
 
   const handleUpdateEmail = (event) => {
@@ -82,10 +84,10 @@ function Register() {
             <FormControl fullWidth variant="outlined">
               <InputOutline
                 placeholder="Data de Nascimento"
-                value={name}
+                value={birthday}
                 required
-                type="text"
-                onChange={handleUpdateName}
+                type="date"
+                onChange={handleUpdateBirthday}
                 startAdornment={
                   <CakeOutlinedIcon/>
                 }
