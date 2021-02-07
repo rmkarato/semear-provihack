@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import landingImg from "../../assets/images/landing.svg" ;
 
@@ -8,7 +7,11 @@ import {
   LandingImg,
   TextContainer,
   TitleText,
-  SubtitleContainer
+  SubtitleContainer,
+  StyledLink,
+  ButtonSignup,
+  ButtonLinkSignup,
+  LoginWrapper
 } from "./styled";
 
 function Landing() {
@@ -24,13 +27,21 @@ function Landing() {
             <p>Aprenda</p>
             <p>Ensine</p>
           </SubtitleContainer>
-          <Link to="/signup">
-            CRIAR CONTA
-          </Link>
-          Já tem uma conta? 
-          <Link to="/signup">
-            Fazer login.
-          </Link>
+          
+          <div>
+            <ButtonSignup>
+              <ButtonLinkSignup to="/signup">
+                CRIAR CONTA
+              </ButtonLinkSignup>
+            </ButtonSignup>
+            
+            <LoginWrapper>
+              Já tem uma conta?
+              <StyledLink to="/signup">
+                Fazer login.
+              </StyledLink>
+            </LoginWrapper>
+          </div>
         </TextContainer>
       </PageWrapper>
   );

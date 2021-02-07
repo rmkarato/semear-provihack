@@ -17,7 +17,6 @@ export const RegisterTitle = styled.div`
     height: 88px;
     font-size: 37px;
     background: #FAC358;
-    padding-left: 67px;
 
     display: flex;
     justify-content: flex-start;
@@ -86,11 +85,24 @@ export const Button = styled.div`
     border-radius: 50px;
 
     margin-top: 52px;
+    margin-bottom: 52px;
     background: #FAC358;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    :hover {
+        background: #E1A531;
+    }
+
+    :active {
+        background: #FAC358;
+    }
+
+    :disabled {
+        background: #FCDDA0;
+    }
 `;
 
 export const ButtonLink = styled(Link)`

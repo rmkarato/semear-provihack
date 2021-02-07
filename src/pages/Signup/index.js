@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 
 import { InputAdornment, IconButton, FormControl } from "@material-ui/core";
 import Visibility from "@material-ui/icons/Visibility";
@@ -12,9 +11,12 @@ import {
   PageWrapper,
   SignInArea,
   SigninTitle,
+  StyledLink,
+  TextP,
   SignupArea,
   SignupTitle,
   FormSignup,
+  TextPass,
   FormSignin,
   SignupText,
   Button,
@@ -58,7 +60,9 @@ function Signup() {
   return (
     <PageWrapper>
       <SignInArea>
-        <SigninTitle>Que bom te ver por aqui novamente!</SigninTitle>
+        <SigninTitle>
+          <TextP>Que bom te ver por aqui novamente!</TextP>
+        </SigninTitle>
 
         <FormSignup>
           <FormControl fullWidth variant="outlined">
@@ -97,23 +101,25 @@ function Signup() {
               }
             />
           </FormControl>
+            <StyledLink to="/resetpassword">
+              <TextPass>Esqueci minha senha</TextPass>
+            </StyledLink>
         </FormSignup>
 
-        <div>
-          <Link to="/resetpassword">
-            Esqueci a senha
-          </Link><br/>
-          <Button>
-            <ButtonLink to="/myprofile">
-              ENTRAR
-            </ButtonLink>
-          </Button>
-        </div>
+        <Button>
+          <ButtonLink to="/myprofile">
+            ENTRAR
+          </ButtonLink>
+        </Button>
       </SignInArea>
 
       <SignupArea>
-          <SignupTitle>Ainda não tem uma conta com a gente?</SignupTitle>
-          <SignupText>Não tem problema, é só preencher as informações abaixo.</SignupText>
+          <SignupTitle>
+            <TextP>Ainda não tem uma conta com a gente?</TextP>
+          </SignupTitle>
+          <SignupText>
+            <TextP>Não tem problema, é só preencher as informações abaixo.</TextP>
+          </SignupText>
           
           <FormSignin>
           <FormControl fullWidth variant="outlined">
