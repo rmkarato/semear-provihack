@@ -14,6 +14,10 @@
 
 <p align="justify"> Projeto de front-end realizado para um desafio proposto pelo hackaton da Provi - ProviHack Woman. Consiste em uma aplicação chamada SEMEAR, utilizada parta transmitir e gerar conhecimento. Através de uma rede de apoio, motivação e aprendizado, mulheres da área de tecnologia em seu início de carreira, trocam experiências e conhecimentos, com o objetivo de gerar auto confiança na busca pela primeira oportunidade no mercado de trabalho. </p>
 
+## Figma (Design da Aplicação)
+
+> https://www.figma.com/file/MIqVe47HwupG23uuP34ds5/Hacka?node-id=0%3A1
+
 ## O que o projeto é capaz de fazer
 
 <p align="justify"> - Ele é dividido em duas partes: pública e privada; </p>
