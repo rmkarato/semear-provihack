@@ -17,12 +17,15 @@
 ## Instruções Para Rodar
 
 <p align="justify"> 1. Para instalar todas as dependências: </p>
+
 > npm install 
 
 <p align="justify"> 2. Para rodar localmente o projeto:</p>
+
 > npm run start 
 
 <p align="justify"> 3. Para gerar uma versão estática do projeto (que ficará na pasta "build").</p>
+
 > npm run build 
 
 ## Equipe 7 - Flaming Flamingos
