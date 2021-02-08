@@ -52,6 +52,10 @@
 
 > npm run build 
 
+## Deploy da Aplicação 
+
+> http://provihackwoman.surge.sh/
+
 ## Equipe 7 - Flaming Flamingos
 
 <p align="justify"> Jennifer Dennis </p>
